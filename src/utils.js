@@ -1,10 +1,10 @@
 /** ****************************************************************************
  *
- * Перемешивает элементы одномерного массива случайным образом.
+ * Shuffles the elements of a 1D array at random.
  *
- * @param array - Целевой массив.
+ * @param {Array} array - Target array.
  */
-function shuffleArray(array) {
+export function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]]
@@ -13,25 +13,25 @@ function shuffleArray(array) {
 
 /** ****************************************************************************
  *
- * Перемешивает элементы матрицы случайным образом.
+ * Shuffles the elements of a 2D array (matrix) at random.
  *
- * @param matrix - Целевая матрица.
+ * @param {Array.<Array>} matrix - target matrix.
  */
-function shuffleMatrix(matrix) {
+export function shuffleMatrix(matrix) {
 
   let array = []
 
-  /** Матрица развертывается в одномерный массив. */
+  /** Matrix expands into a 1D array. */
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[i].length; j++) {
       array.push(matrix[i][j])
     }
   }
 
-  /** Перемешивание массива. */
+  /** Shuffle the array. */
   shuffleArray(array)
 
-  /** Массив собирается в матрицу. */
+  /** The array is collected into a matrix. */
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[i].length; j++) {
       matrix[i][j] = array.pop()
