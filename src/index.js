@@ -408,6 +408,7 @@ console.groupEnd()
 
 console.log('---')
 console.log('%cResults (ms):', 'font-weight: bold; color: #ffffff;')
+console.log('If you do not see the result table then refresh the page.')
 
 for (let key1 in stats) {
   for (let key2 in stats[key1])
