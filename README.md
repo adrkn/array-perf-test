@@ -5,6 +5,8 @@
 
 The application tests the performance of various types of 3D (three-dimensional) arrays. Test results are output to the console.
 
+Demo: <http://mariekit.ru/datagrok/array-perf-test/?x=100&y=100&z=100>
+
 ## Tested types of arrays:
 
 - Simple 3D array (`[][][] of float`).
